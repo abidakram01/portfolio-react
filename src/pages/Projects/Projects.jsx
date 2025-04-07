@@ -28,7 +28,7 @@ const ProjectShowcase = () => {
     {
       title: "Hoobank - UX Landing Page",
       description: "I designed the user experience (UX). Hoobank is a modern landing banking app that provides a seamless and user-friendly experience for managing finances.",
-      tags: ["UX Design"],
+      tags: ["UX Design", "Figma", "HTML", "Tailwind CSS"],
       links: {
         demo: "https://hoooobank.netlify.app",
       },
