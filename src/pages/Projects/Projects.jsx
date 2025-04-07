@@ -8,6 +8,7 @@ import {
   Filter,
 } from "lucide-react";
 import movies from "@/assets/images/movies.jpg";
+import hoobank from "@/assets/images/hoobank.png";
 
 const ProjectShowcase = () => {
   const [filter, setFilter] = useState("All");
@@ -16,8 +17,7 @@ const ProjectShowcase = () => {
     {
       title: "FlixMovies",
       description: "I designed the user experience (UX) and developed in Angular 18 this platform from scratch. FlixMovies is a place where users can easily discover and explore a wide range of movies, TV shows, and actors.",
-      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "UX", "Web Development"],
-      category: "Frontend",
+      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "UX Design"],
       links: {
         github: "https://github.com/abidakram01/angular-movie-app",
         demo: "https://trailerhubpro.netlify.app",
@@ -25,7 +25,17 @@ const ProjectShowcase = () => {
       image: movies,
       featured: true,
     },
-    // You can add more projects here
+    {
+      title: "Hoobank - UX Landing Page",
+      description: "I designed the user experience (UX). Hoobank is a modern landing banking app that provides a seamless and user-friendly experience for managing finances.",
+      tags: ["UX Design"],
+      links: {
+        demo: "https://hoooobank.netlify.app",
+      },
+      image: hoobank,
+      featured: false,
+    },
+    
   ];
 
   const categories = [
