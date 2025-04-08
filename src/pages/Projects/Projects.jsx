@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import {
   Github,
   ExternalLink,
-  Code,
-  Monitor,
-  Award,
-  Filter,
 } from "lucide-react";
 import movies from "@/assets/images/movies.jpg";
 import hoobank from "@/assets/images/hoobank.png";
@@ -16,8 +12,10 @@ const ProjectShowcase = () => {
   const projects = [
     {
       title: "FlixMovies",
-      description: "I designed the user experience (UX) and developed in Angular 18 this platform from scratch. FlixMovies is a place where users can easily discover and explore a wide range of movies, TV shows, and actors.",
-      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "UX Design"],
+      description:
+        "A movie discovery platform built with Angular. It includes UX design and frontend implementation.",
+      tags: ["Angular", "TypeScript", "Tailwind CSS"],
+      category: "Frontend",
       links: {
         github: "https://github.com/abidakram01/angular-movie-app",
         demo: "https://trailerhubpro.netlify.app",
@@ -26,9 +24,11 @@ const ProjectShowcase = () => {
       featured: true,
     },
     {
-      title: "Hoobank - UX Landing Page",
-      description: "I designed the user experience (UX). Hoobank is a modern landing banking app that provides a seamless and user-friendly experience for managing finances.",
-      tags: ["UX Design", "Figma", "HTML", "Tailwind CSS"],
+      title: "Hoobank Landing Page",
+      description:
+        "A clean UX-focused banking landing page. Designed using Figma and implemented with Tailwind.",
+      tags: ["Figma", "Tailwind CSS", "UX Design"],
+      category: "UX",
       links: {
         demo: "https://hoooobank.netlify.app",
       },
@@ -38,10 +38,8 @@ const ProjectShowcase = () => {
     
   ];
 
-  const categories = [
-    "All",
-    ...new Set(projects.map((project) => project.category)),
-  ];
+  const categories = ["All", "Frontend", "UX"];
+
   const filteredProjects =
     filter === "All"
       ? projects
@@ -51,7 +49,6 @@ const ProjectShowcase = () => {
     <div className="min-h-screen bg-[#04081A] py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        {/* Modern grid pattern */}
         <div className="absolute inset-0">
           <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
@@ -116,7 +113,6 @@ const ProjectShowcase = () => {
                       Featured Project
                     </div>
                   )}
-                  
 
                   <h3 className="text-3xl font-bold text-white mb-4 mt-5">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">
@@ -140,22 +136,26 @@ const ProjectShowcase = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-4">
-                    <a
-                      href={project.links.github}
-                      className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 text-white hover:text-cyan-400 hover:bg-slate-900/70 transition-all border border-slate-700/50"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={18} />
-                    </a>
-                    <a
-                      href={project.links.demo}
-                      className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 text-white hover:text-emerald-400 hover:bg-slate-900/70 transition-all border border-slate-700/50"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
+                    {project.links.github && (
+                      <a
+                        href={project.links.github}
+                        className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 text-white hover:text-cyan-400 hover:bg-slate-900/70 transition-all border border-slate-700/50"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
+                    {project.links.demo && (
+                      <a
+                        href={project.links.demo}
+                        className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-800/50 text-white hover:text-emerald-400 hover:bg-slate-900/70 transition-all border border-slate-700/50"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
