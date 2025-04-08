@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import {
-  Github,
-  ExternalLink,
-} from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import movies from "@/assets/images/movies.jpg";
 import hoobank from "@/assets/images/hoobank.png";
+import dailychallenges from "@/assets/images/dailychallenge.jpg";
 
 const ProjectShowcase = () => {
   const [filter, setFilter] = useState("All");
@@ -14,14 +12,14 @@ const ProjectShowcase = () => {
       title: "FlixMovies",
       description:
         "A movie discovery platform built with Angular. It includes UX design and frontend implementation.",
-      tags: ["Angular", "TypeScript", "Tailwind CSS"],
+      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "Rest API"],
       category: "Frontend",
+      type: "🔥 Passion Project",
       links: {
         github: "https://github.com/abidakram01/angular-movie-app",
         demo: "https://trailerhubpro.netlify.app",
       },
       image: movies,
-      featured: true,
     },
     {
       title: "Hoobank Landing Page",
@@ -29,17 +27,28 @@ const ProjectShowcase = () => {
         "A clean UX-focused banking landing page. Designed using Figma and implemented with Tailwind.",
       tags: ["Figma", "Tailwind CSS", "UX Design"],
       category: "UX",
+      type: "💼 Client Work",
       links: {
-        demo: "https://hoooobank.netlify.app",
+        demo: "https://www.figma.com/proto/Svktuz33hVmq57w1fZp2Ru/HooBank",
       },
       image: hoobank,
-      featured: false,
     },
-    
+    {
+      title: "100 Daily UI Challenges",
+      description:
+        "A collection of 100 daily UI challenges, showcasing various design concepts and implementations.",
+      tags: ["Figma", "UI Design", "UX Design"],
+      category: "UX",
+      type: "🎨 Creative UI Challenge",
+      links: {
+        demo: "https://www.figma.com/proto/ZbjQxlDBGAW5XzhYVK83XP/100-Daily-UI-Challenge",
+      },
+      image: dailychallenges,
+    },
   ];
+  
 
   const categories = ["All", "Frontend", "UX"];
-
   const filteredProjects =
     filter === "All"
       ? projects
@@ -47,7 +56,6 @@ const ProjectShowcase = () => {
 
   return (
     <div className="min-h-screen bg-[#04081A] py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute inset-0">
           <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
@@ -107,10 +115,10 @@ const ProjectShowcase = () => {
 
                 {/* Project Content */}
                 <div className="md:w-1/2 p-8 relative backdrop-blur-sm bg-[#0a1428]/30 group-hover:bg-[#081020]/50 transition-all duration-300">
-                  {/* Featured Badge */}
-                  {project.featured && (
+                  {/* Dynamic Badge */}
+                  {project.type && (
                     <div className="absolute top-3 right-6 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 backdrop-blur-sm">
-                      Featured Project
+                      {project.type}
                     </div>
                   )}
 

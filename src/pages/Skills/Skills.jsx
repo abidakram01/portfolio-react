@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import {
   SiAngular,
-  SiNextdotjs,
+  SiExpress,
   SiTypescript,
   SiTailwindcss,
   SiPostgresql,
@@ -27,6 +27,7 @@ import {
   SiFirebase,
   SiVercel,
   SiVite,
+  SiMysql
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
@@ -73,11 +74,11 @@ const SkillsSection = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
         {
           name: "Angular",
           icon: <SiAngular className="w-4 h-4 text-[#DD0031]" />,
         },
+        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
         
         {
           name: "TypeScript",
@@ -106,13 +107,17 @@ const SkillsSection = () => {
           name: "Node.js",
           icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
         },
-        // {
-        //   name: "Python",
-        //   icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
-        // },
+        {
+          name: "Express",
+          icon: <SiExpress className="w-4 h-4 text-[#3776AB]" />,
+        },
         {
           name: "PostgreSQL",
           icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
+        },
+        {
+          name: "MySQL",
+          icon: <SiMysql className="w-4 h-4 text-[#fff]" />,
         },
         {
           name: "MongoDB",
@@ -122,10 +127,10 @@ const SkillsSection = () => {
           name: "REST APIs",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
         },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
-        },
+        // {
+        //   name: "GraphQL",
+        //   icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+        // },
       ],
     },
     {

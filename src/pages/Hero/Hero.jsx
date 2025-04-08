@@ -35,11 +35,11 @@ const profile = {
     name: 'Abid Akram',
     title: 'Frontend Engineer | UI/UX Enthusiast | Problem Solver',
     skills: [
-        'Angular', 'React', 'Next.js', "JavaScript", 'TypeScript', 
-        'HTML', 'CSS', 'SCSS', 'Tailwind CSS', 'Framer Motion',
-        'REST API', 'Git', 'GitHub', 'Express', 'MySQL', 
-        'MongoDB', 'CI/CD', 'Linux', 'Docker (Basic)','Figma', 
-        'Adobe Photoshop', 'Webflow', 'WordPress'
+        'Angular 18', 'React', "JavaScript", 'TypeScript', 
+        'HTML', 'CSS', 'SCSS', 'Tailwind CSS', 'Animations',
+        'REST API', 'Git', 'MySQL', 'MongoDB', 'CI/CD', 
+        'Linux', 'Docker (Basic)','Figma', 'Adobe Photoshop', 
+        'Webflow', 'WordPress'
     ],
     hardWorker: true,
     quickLearner: true,
@@ -151,19 +151,19 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/abidakram01"
+                  href="/Abid_Akram_UI_UX_Frontend_Dev_Resume.pdf"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      <span>Learn More</span>
+                      <span>Get Resume</span>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
                 </a>
 
                 {/* Contact Button */}
-                <a href="/Abid_Akram_UI_UX_Frontend_Dev_Resume.pdf" className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                {/* <a href="/Abid_Akram_UI_UX_Frontend_Dev_Resume.pdf" className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
@@ -171,7 +171,7 @@ const profile = {
                       <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>
-                </a>
+                </a> */}
               </div>
 
               {/* Floating badges */}
