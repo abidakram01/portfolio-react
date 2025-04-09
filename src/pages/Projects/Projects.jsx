@@ -12,9 +12,9 @@ const ProjectShowcase = () => {
       title: "FlixMovies",
       description:
         "A movie discovery platform built with Angular. It includes UX design and frontend implementation.",
-      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "Rest API"],
+      tags: ["Angular 18", "TypeScript", "Tailwind CSS", "IMDB - Rest API"],
       category: "Frontend",
-      type: "🔥 Passion Project",
+      type: "Featured Project",
       links: {
         github: "https://github.com/abidakram01/angular-movie-app",
         demo: "https://trailerhubpro.netlify.app",
@@ -25,9 +25,9 @@ const ProjectShowcase = () => {
       title: "Hoobank Landing Page",
       description:
         "A clean UX-focused banking landing page. Designed using Figma and implemented with Tailwind.",
-      tags: ["Figma", "Tailwind CSS", "UX Design"],
+      tags: ["Figma", "UX Design"],
       category: "UX",
-      type: "💼 Client Work",
+      type: false,
       links: {
         demo: "https://www.figma.com/proto/Svktuz33hVmq57w1fZp2Ru/HooBank",
       },
@@ -37,9 +37,9 @@ const ProjectShowcase = () => {
       title: "100 Daily UI Challenges",
       description:
         "A collection of 100 daily UI challenges, showcasing various design concepts and implementations.",
-      tags: ["Figma", "UI Design", "UX Design"],
+      tags: ["Figma", "UX Design"],
       category: "UX",
-      type: "🎨 Creative UI Challenge",
+      type: false,
       links: {
         demo: "https://www.figma.com/proto/ZbjQxlDBGAW5XzhYVK83XP/100-Daily-UI-Challenge",
       },
